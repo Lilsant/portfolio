@@ -1,0 +1,260 @@
+@import "_normalize.sass"
+@import "_variables.sass"
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap')
+body 
+    background-color: $bg-main
+    color: $white
+    font-family: 'DM Sans', sans-serif
+    font-weight: 500
+section
+    opacity: 0
+.element-show
+    opacity: 1
+    transition: all 1.5s
+    transform: translateY(3%)
+.container
+    width: 1050px
+    padding-top: 35px
+    margin: 0 auto
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__logo
+        font-size: 23px
+        font-weight: 700
+    &__nav
+        width: 50%
+        &-item
+            position: relative
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                bottom: -5px
+                left: 0
+                width: 0%
+                height: 3px
+                background-color: $bg-yellow
+                transition: all 0.5s
+            &:hover
+                &::after
+                    width: 100%   
+    &__nav-list
+        display: flex
+        justify-content: space-between
+    &__nav-link
+        color: $white
+        font-size: 18px
+
+.information
+    margin-top: 110px
+    display: flex
+    justify-content: space-between
+    &__title
+        width: 60%
+        line-height: 2.7rem
+    &__subtitle
+        margin-top: 18px
+        margin-bottom: 35px
+        color: $gray
+    &__hand
+        display: inline-block
+        animation: hand 1.5s infinite alternate linear
+.button
+    padding: 12px 30px
+    background-color: transparent
+    color: $white
+    border: 1px solid #333
+    cursor: pointer
+    transition: all 0.2s
+    &:hover
+        transform: scale(1.15)
+    &-yellow
+        background-color: $bg-yellow
+        color: $black
+        border: none
+        margin-right: 20px
+.about
+    margin-top: 160px
+    &__main
+        width: 65%
+        margin: 0 auto
+        text-align: center
+    &__description
+        font-weight: 400
+        color: $gray
+        line-height: 1.8rem
+    &__list
+        display: flex
+        justify-content: space-between
+        align-items: center
+        text-align: center
+        padding-inline-start: 0
+    &__contacts
+        margin-top: 100px
+        &-img
+            width: 62px
+            height: 62px
+            margin: 0 auto
+            background-color: $bg-img
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all 0.3s
+            cursor: pointer
+            &:hover
+                transform: translateY(-10px)
+                background: $gray
+        &-title
+            margin-top: 15px
+            margin-bottom: 5px
+            font-weight: 700
+            font-size: 16px
+        &-description
+            font-weight: 400
+            font-size: 14px
+            color: $gray
+.title
+        font-weight: 700
+        font-size: 24px
+
+.skills
+    &__inner
+        text-align: center
+        padding-top: 130px
+        padding-bottom: 130px
+    &__list
+        display: flex
+        justify-content: center
+        margin-top: 25px
+        padding-inline-start: 0px
+        &-item    
+            padding: 35px
+            margin-right: 5px
+            margin-left: 5px
+            background-color: $bg-img
+            display: flex
+            text-align: center
+            flex-direction: column
+    &__item
+        &-img
+            width: 60px
+            height: 62px
+        &-title
+            margin-top: 15px
+.projects
+    text-align: center
+    &__inner
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        margin-top: 25px
+    &__card
+        width: 35%
+        background-color: $bg-img
+        padding: 20px 25px 20px 25px
+        border: 1px solid #333
+        margin-right: 10px
+        margin-left: 10px
+        margin-bottom: 20px
+        &-img
+            width: 100%
+            background-color: $black
+            border: 1px solid #333
+            margin-bottom: 10px
+        &-image
+            width: 100%
+    &__info
+        text-align-last: left
+        &-tech
+            color: $gray
+            font-size: 14px
+
+
+
+@keyframes hand
+    0%
+        transform: rotate(45deg)
+    100%
+        transform: rotate(0deg)
+
+@media screen and (max-width: 1110px)
+    .container
+        width: 100%
+        padding-right: 20px
+        padding-left: 20px
+
+@media screen and (max-width: 940px)
+    .skills__list
+        flex-wrap: wrap
+        width: fit-content
+        &-item
+            flex-basis: 30%
+            align-items: center
+            justify-content: center
+            margin-bottom: 10px
+
+@media screen and(max-width: 750px)
+    .header__nav
+        width: 70% 
+    .projects__card
+        width: 46%
+    .information__title
+        width: 100%
+    
+@media screen and(max-width: 660px)
+    .information__buttons
+        .button
+            width: 90%
+        .button-yellow
+            margin-right: 0
+            margin-bottom: 15px 
+    .about__main
+        width: 80%
+
+@media screen and (max-width: 580px) 
+    .information
+        flex-direction: column
+        margin-top: 70px
+        &__about
+            text-align: center
+            margin-bottom: 40px
+        &__image
+            width: 70%
+            margin: 0 auto
+    .about
+        &__list
+            flex-wrap: wrap
+            width: 80%
+            margin: 0 auto
+            &-item
+                flex-basis: 50%
+                margin-bottom: 15px
+    .skills__list
+        &-item
+            flex-basis: 46%
+    .projects
+        &__card
+            flex-basis: 100%
+    .header
+        &__nav
+            display: none
+
+
+@media screen and (max-width: 430px)
+    .information
+        &__image
+            width: 90%
+    .about
+        &__list
+            width: 95%
+        &__main
+            width: 90%
+
+
+
+
+    

@@ -23,6 +23,13 @@ section
     &__logo
         font-size: 23px
         font-weight: 700
+        user-select: none
+        &-block
+            transition: 1s all
+            &:hover
+                transform: rotate(360deg)
+            // &:hover
+            //     animation: logo 0.5s 1 linear
     &__nav
         width: 50%
         &-item
@@ -169,6 +176,8 @@ section
             width: 100%
     &__info
         text-align-last: left
+        display: flex
+        flex-direction: column
         &-tech
             color: $gray
             font-size: 14px

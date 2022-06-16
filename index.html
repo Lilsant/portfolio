@@ -10,20 +10,24 @@
   <body>
     <div class="container">
       <header class="header">
-        <div class="header__logo">Lilsant</div>
+        <div class="header__logo-block">
+          <span class="header__logo">Lilsant</span>
+        </div>
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Обо мне</a>
+              <a href="index.html#about" class="header__nav-link">Обо мне</a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Проекты</a>
+              <a href="index.html#projects" class="header__nav-link">Проекты</a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Навыки</a>
+              <a href="index.html#skills" class="header__nav-link">Навыки</a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Контакты</a>
+              <a href="index.html#contacts" class="header__nav-link"
+                >Контакты</a
+              >
             </li>
           </ul>
         </nav>
@@ -37,13 +41,21 @@
             </h1>
             <p class="information__subtitle">Front-end разработчик</p>
             <div class="information__buttons">
-              <button class="button button-yellow">Список работ</button>
-              <button class="button">Контакты</button>
+              <a href="index.html#projects"
+                ><button class="button button-yellow">Список работ</button></a
+              >
+              <a href="index.html#contacts"
+                ><button class="button">Контакты</button></a
+              >
             </div>
           </div>
-          <img class="information__image" src="images/image.svg" alt="main img" />
+          <img
+            class="information__image"
+            src="images/image.svg"
+            alt="main img"
+          />
         </section>
-        <section class="about">
+        <section id="about" class="about">
           <div class="about__main">
             <h2 class="title">Обо мне</h2>
             <p class="about__description">
@@ -57,7 +69,7 @@
               unde excepturi sunt maxime? Perspiciatis, quas.
             </p>
           </div>
-          <div class="about__contacts">
+          <div id="contacts" class="about__contacts">
             <ul class="about__list">
               <li class="about__list-item">
                 <div class="about__contacts-img">
@@ -102,7 +114,7 @@
             </ul>
           </div>
         </section>
-        <section class="skills">
+        <section id="skills" class="skills">
           <div class="skills__inner">
             <h2 class="title">Навыки</h2>
             <ul class="skills__list">
@@ -165,7 +177,7 @@
             </ul>
           </div>
         </section>
-        <section class="projects">
+        <section id="projects" class="projects">
           <h2 class="title">Проекты</h2>
           <div class="projects__inner">
             <div class="projects__card">
@@ -181,6 +193,13 @@
                 <span class="projects__info-tech"
                   >Technologies: HTML5, Saas</span
                 >
+                <a
+                  class="link"
+                  target="_blank"
+                  href="https://github.com/Lilsant/yoga-lp"
+                >
+                  <button class="button">GitHub</button>
+                </a>
               </div>
             </div>
             <div class="projects__card">
@@ -196,6 +215,13 @@
                 <span class="projects__info-tech"
                   >Technologies: React, CSS3, JS</span
                 >
+                <a
+                  class="link"
+                  target="_blank"
+                  href="https://github.com/Lilsant/quiz"
+                >
+                  <button class="button">GitHub</button>
+                </a>
               </div>
             </div>
             <div class="projects__card">
@@ -211,6 +237,13 @@
                 <span class="projects__info-tech"
                   >Technologies: React, CSS3, JS</span
                 >
+                <a
+                  class="link"
+                  target="_blank"
+                  href="https://github.com/Lilsant/wapp"
+                >
+                  <button class="button">GitHub</button>
+                </a>
               </div>
             </div>
             <div class="projects__card">
@@ -226,6 +259,13 @@
                 <span class="projects__info-tech"
                   >Technologies: HTML5, CSS3, JS</span
                 >
+                <a
+                  class="link"
+                  target="_blank"
+                  href="https://github.com/Lilsant/computer-lp"
+                >
+                  <button class="button">GitHub</button>
+                </a>
               </div>
             </div>
           </div>

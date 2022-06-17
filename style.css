@@ -324,6 +324,10 @@ section {
           animation: hand 1.5s infinite alternate linear;
 }
 
+.information .button-yellow {
+  margin-right: 20px;
+}
+
 .button {
   padding: 12px 30px;
   background-color: transparent;
@@ -343,7 +347,6 @@ section {
   background-color: #fdca40;
   color: #171717;
   border: none;
-  margin-right: 20px;
 }
 
 .about {
@@ -551,6 +554,21 @@ section {
     padding-right: 20px;
     padding-left: 20px;
   }
+  .projects__link-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects__link-container .button-yellow {
+    margin-bottom: 20px;
+  }
+  .link {
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -649,4 +667,18 @@ section {
   .about__main {
     width: 90%;
   }
+}
+
+.projects__link-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
 }

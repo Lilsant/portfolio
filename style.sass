@@ -68,6 +68,8 @@ section
     &__hand
         display: inline-block
         animation: hand 1.5s infinite alternate linear
+    .button-yellow
+        margin-right: 20px
 .button
     padding: 12px 30px
     background-color: transparent
@@ -81,7 +83,6 @@ section
         background-color: $bg-yellow
         color: $black
         border: none
-        margin-right: 20px
 .about
     margin-top: 160px
     &__main
@@ -195,6 +196,14 @@ section
         width: 100%
         padding-right: 20px
         padding-left: 20px
+    .projects__link-container
+        flex-direction: column
+        .button-yellow
+            margin-bottom: 20px
+    .link
+        width: 100%
+    .button
+        width: 100%
 
 @media screen and (max-width: 940px)
     .skills__list
@@ -263,7 +272,12 @@ section
         &__main
             width: 90%
 
-
+.projects__link-container
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 10px
 
 
     

@@ -13,6 +13,12 @@ let options = {
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll("section");
 
+if (screen.width < 500) {
+  elements.forEach((el, i) => {
+    if (i == elements.length - 1) el.classList.add("element-show");
+  });
+}
+
 for (let elm of elements) {
   observer.observe(elm);
 }

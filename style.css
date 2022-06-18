@@ -297,6 +297,11 @@ section {
   font-size: 18px;
 }
 
+.pipe {
+  color: #828282;
+  display: inline-block;
+}
+
 .information {
   margin-top: 110px;
   display: -webkit-box;

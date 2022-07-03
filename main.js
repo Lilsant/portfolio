@@ -46,7 +46,6 @@ let textInterval = null,
   pipeInterval = null;
 
 function getPipe() {
-  console.log(pipe);
   if (pipeCheck) {
     pipeCheck = false;
     pipe.style.display = "none";
